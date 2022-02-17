@@ -169,12 +169,14 @@ class _LoginScreenState extends State<LoginScreen> {
                                           maxLines: 1,
                                         ),
                                       ),
-                                      CustomContainerButton(
-                                        onPressed: () async {
-                                          await Get.offAll(() => HomeModule());
-                                        },
-                                        widget: Text('SIGN IN', style: cardDashboardTitle,),
-                                        color: estelColor,
+                                      Flexible(
+                                        child: CustomContainerButton(
+                                          onPressed: () async {
+                                            await Get.offAll(() => HomeModule());
+                                          },
+                                          widget: Text('SIGN IN', style: cardDashboardTitle,),
+                                          color: estelColor,
+                                        ),
                                       ),
                                     ],
                                   ),
